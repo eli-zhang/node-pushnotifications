@@ -24,10 +24,10 @@ const getDefaultAlert = (data) => ({
   title: data.title,
   body: data.body,
   'title-loc-key': data.titleLocKey,
-  'title-loc-args': data.titleLocArgs,
+  'title-loc-args': JSON.parse(data.titleLocArgs),
   'loc-key': data.locKey,
   // bodyLocArgs is kept for backward compatibility
-  'loc-args': data.locArgs || data.bodyLocArgs,
+  'loc-args': JSON.parse(data.locArgs || data.bodyLocArgs),
   'launch-image': data.launchImage,
   action: data.action,
 });
